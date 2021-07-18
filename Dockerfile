@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -rf /var/lib/apt/lists/*
 
-ARG SXM="sxm==0.2.5"
+ARG SXM="sxm==0.2.6"
 ARG SXM_PLAYER="sxm-player==0.2.3"
 ARG SXM_PLAYER_PLUGINS="sxm-discord==0.2.2"
 
