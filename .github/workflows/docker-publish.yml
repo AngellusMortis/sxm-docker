@@ -14,8 +14,7 @@ on:
     branches: [ master ]
 
 env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
+  DOCKER_HUB_USERNAME: angellusmortis
   # github.repository as <account>/<repo>
   IMAGE_NAME: angellusmortis/sxm-player
 
@@ -38,8 +37,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ env.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log into registry ghcr.io
