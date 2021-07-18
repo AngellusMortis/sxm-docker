@@ -31,22 +31,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Login against a Docker registry except on PR
-      # https://github.com/docker/login-action
       - name: Log into registry ghcr.io
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log into registry DockerHub
         if: github.event_name != 'pull_request'
         uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
         with:
           username: ${{ env.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Log into registry ghcr.io
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
-        with:
-          registry: docker.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
 
       # Extract metadata (tags, labels) for Docker
