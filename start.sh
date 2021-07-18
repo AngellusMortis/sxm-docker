@@ -5,7 +5,6 @@ set -o pipefail
 set -o nounset
 
 export SXM_HOST=0.0.0.0
-SXM_EXTRA_ARGS=""
 
 if [[ -n ${SXM_ARCHIVE+x} ]]; then
     export SXM_OUTPUT_FOLDER=/output
@@ -16,12 +15,12 @@ if [[ -n ${SXM_DISCORD_TOKEN+x} ]]; then
 
     echo "Running Discord bot..."
 elif [[ -n ${SXM_ARCHIVE+x} ]]; then
-    SXM_PLAYER_CLASS=CLIPlayer
-    SXM_EXTRA_ARGS="$SXM_PLAYER_CLASS --channel-id $SXM_ARCHIVE"
+    export SXM_PLAYER_CLASS=CLIPlayer
+    export SXM_CLI_CHANNEL_ID=$SXM_ARCHIVE
 
     echo "Running archiver..."
 else
     echo "Running HLS proxy..."
 fi
 
-sxm-player $SXM_EXTRA_ARGS
+sxm-player
