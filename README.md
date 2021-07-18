@@ -9,11 +9,11 @@
 >
 > Designed for PERSONAL USE ONLY
 >
-> sxm-player is a 100% unofficial project and you use it at your own
+> `sxm-player` is a 100% unofficial project and you use it at your own
 > risk. It is designed to be used for personal use with a small number
 > of users listening to it at once. Similar to playing music over a
-> speakers from the radio directly. Using sxm-player in any corporate
-> setting, to attempt to priate music, or to try to make a profit off
+> speakers from the radio directly. Using `sxm-player` in any corporate
+> setting, to attempt to pirate music, or to try to make a profit off
 > your subscription may result in you getting in legal trouble.
 
 A pluggable SXM music player written in Python
@@ -45,9 +45,9 @@ Or make an issue for me to add it.
 
 ## Usage
 
-**NOTE**: -it is required when running this from command line (and not
-via systemd, Portainer, etc.). If you do not pass -it, you will not have
-proper color support and SIGINT (CTRL+C) will not work.
+**NOTE**: `-it` is required when running this from command line (and not
+via systemd, Portainer, etc.). If you do not pass `-it`, you will not have
+proper color support and `SIGINT` (CTRL+C) will not work.
 
 ### Anonymous HLS Proxy
 
@@ -84,7 +84,7 @@ docker run --rm -it \
 
 This will run a Discord bot using the [sxm-discord plugin
 player](https://sxm-discord.readthedocs.io/en/latest/usage.html). Can be
-combined with SXM\_ARCHIVE env to also archive anything the bot plays.
+combined with `SXM_ARCHIVE` env to also archive anything the bot plays.
 
 ```bash
 docker run --rm -it \
