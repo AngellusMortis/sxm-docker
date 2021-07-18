@@ -4,6 +4,7 @@
 [![CI Status](https://github.com/AngellusMortis/sxm-player/actions/workflows/ci.yml/badge.svg)](https://github.com/AngellusMortis/sxm-player/actions/workflows/ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/afffd386b11a760d80cc/maintainability)](https://codeclimate.com/github/AngellusMortis/sxm-player/maintainability)
 [![Latest PyPI version](https://pypip.in/v/sxm-player/badge.png)](https://pypi.org/project/sxm-player/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/angellusmortis/sxm-player.svg?style=flat-square)](https://hub.docker.com/r/angellusmortis/sxm-player/)
 
 > **warning**
 >
