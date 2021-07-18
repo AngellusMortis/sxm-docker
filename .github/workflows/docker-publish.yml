@@ -6,8 +6,6 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '31 20 * * *'
   push:
     branches: [ master ]
     # Publish semver tags as releases.
@@ -19,12 +17,12 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: angellusmortis/sxm-player
 
 
 jobs:
   build:
-
+    name: "Build and Publish Docker"
     runs-on: ubuntu-latest
     permissions:
       contents: read
