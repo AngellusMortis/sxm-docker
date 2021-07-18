@@ -1,6 +1,11 @@
 FROM python:3.9.6-slim-buster
 
 LABEL org.opencontainers.image.authors="cbailey@mort.is"
+LABEL org.opencontainers.image.title=sxm-player
+LABEL org.opencontainers.image.description=
+LABEL org.opencontainers.image.url=https://github.com/AngellusMortis/sxm-player
+LABEL org.opencontainers.image.source=https://github.com/AngellusMortis/sxm-docker
+LABEL org.opencontainers.image.licenses=MIT
 
 RUN apt-get update \
     && apt-get install -y ffmpeg procps curl \
