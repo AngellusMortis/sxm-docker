@@ -15,7 +15,7 @@ RUN apt-get update \
 
 ARG SXM="sxm==0.2.6"
 ARG SXM_PLAYER="sxm-player==0.2.3"
-ARG SXM_PLAYER_PLUGINS="sxm-discord==0.2.3"
+ARG SXM_PLAYER_PLUGINS="sxm-discord==0.2.4"
 
 RUN pip install --no-cache-dir -U pip $SXM $SXM_PLAYER $SXM_PLAYER_PLUGINS \
     && pip install --no-cache-dir sxm
