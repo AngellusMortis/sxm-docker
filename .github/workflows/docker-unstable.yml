@@ -10,9 +10,6 @@ on:
     branches: [ master ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
-    paths:
-      - 'start.sh'
-      - 'Dockerfile'
 
 env:
   DOCKER_HUB_USERNAME: angellusmortis
