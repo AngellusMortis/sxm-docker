@@ -17,8 +17,8 @@ ARG SXM="sxm==0.2.6"
 ARG SXM_PLAYER="sxm-player==0.2.3"
 ARG SXM_PLAYER_PLUGINS="sxm-discord==0.2.4"
 
-RUN pip install --no-cache-dir -U pip $SXM $SXM_PLAYER $SXM_PLAYER_PLUGINS \
-    && pip install --no-cache-dir sxm
+RUN pip install --no-cache-dir -U pip \
+    && pip install --no-cache-dir $SXM $SXM_PLAYER $SXM_PLAYER_PLUGINS
 
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
