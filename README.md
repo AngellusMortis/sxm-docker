@@ -60,7 +60,7 @@ docker run --rm -it \
     -e SXM_USERNAME=username \
     -e SXM_PASSWORD=password \
     -p 9999:9999 \
-    sxm:latest
+    ghcr.io/angellusmortis/sxm-player:latest
 $ ffmpeg -y -i http://127.0.0.1:9999/octane.m3u8 -f mp2 output.mp3
 ```
 
@@ -76,7 +76,7 @@ docker run --rm -it \
     -e SXM_USERNAME=username \
     -e SXM_PASSWORD=password \
     -e SXM_ARCHIVE=octane \
-    sxm:latest
+    ghcr.io/angellusmortis/sxm-player:latest
 ```
 
 ### Plugins
@@ -92,5 +92,5 @@ docker run --rm -it \
     -e SXM_USERNAME=username \
     -e SXM_PASSWORD=password \
     -e SXM_DISCORD_TOKEN=token \
-    sxm:latest
+    ghcr.io/angellusmortis/sxm-player:latest
 ```
